@@ -1,0 +1,40 @@
+.donasi-page {
+  margin: 80px 120px;
+}
+
+/* Style the buttons */
+.tab button {
+  font-size: 18px;
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-right: 60px;
+}
+
+/* Change background color of buttons on hover */
+/* .tab button:hover {
+  background-color: #ddd;
+} */
+
+/* Set active tab button */
+.tab button.active {
+  text-decoration: underline;
+  text-underline-offset: 16px;
+  font-weight: 900;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  margin-top: 60px;
+  background-color: aquamarine;
+}
+
+/* Show the active tab content */
+.tabcontent.show {
+  display: block;
+}

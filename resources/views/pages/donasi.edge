@@ -1,13 +1,38 @@
 @layout('layouts/main')
 
 @section('styles')
-  <link rel="stylesheet" href="css/donasi.css">
+<link rel="stylesheet" href="css/donasi.css">
 @endsection
 
 @section('content')
-{{--  code  --}}
+<div class="donasi-page">
+  <div class="tab">
+    <button class="tablinks active" onclick="openTab(event, 'Kesehatan')">Kesehatan</button>
+    <button class="tablinks" onclick="openTab(event, 'Pendidikan')">Pendidikan</button>
+    <button class="tablinks" onclick="openTab(event, 'Kemiskinan')">Kemiskinan</button>
+    <button class="tablinks" onclick="openTab(event, 'Bencana')">Bencana</button>
+  </div>
+  
+  <br>
+  
+  <div id="Kesehatan" class="tabcontent show">
+    <p>teks</p>
+  </div>
+
+  <div id="Pendidikan" class="tabcontent">
+  </div>
+
+  <div id="Kemiskinan" class="tabcontent">
+  </div>
+
+  <div id="Bencana" class="tabcontent">
+  </div>
+  
+  
+</div>
+
 @endsection
 
 @section('scripts')
-  <script src="js/donasi.js"></script>
+<script src="js/donasi.js"></script>
 @endsection
