@@ -4,9 +4,9 @@
   </div>
   <nav>
     <ul>
-      <li><a href="/">Beranda</a></li>
-      <li><a href="">Gudang Barang</a></li>
-      <li><a href="/donasi">Donasi</a></li>
+      <li><a class="{{ (title === "Beranda") ? 'active' : 'tes' }}" href="/">Beranda</a></li>
+      <li><a class="{{ (title === "Gudang Barang") ? 'active' : '' }}" href="">Gudang Barang</a></li>
+      <li><a class="{{ (title === "Donasi") ? 'active' : '' }}" href="/donasi">Donasi</a></li>
       <li><a href="">Login</a></li>
     </ul>
   </nav>

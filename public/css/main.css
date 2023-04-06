@@ -41,8 +41,14 @@ li {
   font-weight: 600;
 }
 
-header ul li a {
+a {
+  padding: 5px 5px;
   color: #4167a6;
+}
+
+a.active {
+  background-color: azure;
+  border-radius: 3px;
 }
 
 /* end of header */

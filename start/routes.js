@@ -1,5 +1,7 @@
 "use strict";
 
+const { get } = require("@adonisjs/lucid/src/Factory");
+
 /*
 |--------------------------------------------------------------------------
 | Routes
@@ -16,6 +18,20 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use("Route");
 
-Route.on("/").render("pages/beranda");
-Route.on("/donasi").render("pages/donasi");
-Route.on("/gudangbarang").render("pages/gudangbarang");
+Route.get("/", async ({ view, response }) => {
+  return view.render("pages/beranda", {
+    title: "Beranda",
+  });
+});
+
+Route.get("/donasi", async ({ view, response }) => {
+  return view.render("pages/donasi", {
+    title: "Donasi",
+  });
+});
+
+Route.get("/gudangbarang", async ({ view, response }) => {
+  return view.render("pages/gudangbarang", {
+    title: "Gudang Barang",
+  });
+});
