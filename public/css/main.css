@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+/* reset style */
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* end of reset style */
+
+/* header */
+
+header {
+  display: flex;
+  background-color: #5e8ad5;
+  height: 66px;
+}
+
+#logo {
+  position: absolute;
+  height: 86px;
+  width: 86px;
+  left: 112px;
+  top: 15px;
+}
+
+ul {
+  display: flex;
+  position: absolute;
+  left: 770px;
+  top: 20px;
+}
+
+li {
+  margin: 0px 8px;
+  font-weight: 600;
+}
+
+header ul li a {
+  color: #4167a6;
+}
+
+/* end of header */
+
+/* footer */
+
+footer {
+  position: relative;
+}
+
+.footer-content {
+  position: absolute;
+  top: 200px;
+  width: 100%;
+  display: flex;
+  background-color: #4167a6;
+  padding: 40px 60px;
+  color: white;
+}
+
+#section-1 {
+  flex: 2;
+}
+
+#section-2,
+#section-3,
+#section-4 {
+  flex: 1;
+}
+
+#section-1 h4 {
+  font-size: 24px;
+}
+
+#section-2 h4,
+#section-3 h4,
+#section-4 h4 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#section-1 p {
+  width: 360px;
+}
+
+#section-1 p,
+#section-2 h5,
+#section-3 h5 {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+/* end of footer */

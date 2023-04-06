@@ -1,0 +1,82 @@
+main section {
+  display: flex;
+  margin: 120px 0;
+}
+
+main .option {
+  margin-top: 80px;
+  justify-content: space-evenly;
+}
+
+.donasi,
+.gudang-barang {
+  position: relative;
+}
+
+#donasi-pic {
+  width: 190px;
+  height: 190px;
+  position: absolute;
+  top: 50px;
+  left: 40px;
+}
+
+#gudang-barang-pic {
+  width: 310px;
+  height: 400px;
+  position: absolute;
+  top: -50px;
+  left: -25px;
+}
+main section .gudang-barang,
+.donasi {
+  transition: transform 0.3s ease;
+  width: 260px;
+  height: 306px;
+  border-radius: 10px;
+  box-shadow: -5px 0 75px -5px #4167a6, 5px 0 5px -5px #4167a6;
+}
+
+main section .gudang-barang:hover,
+.donasi:hover {
+  transform: scale(1.05);
+  border: solid 1px rgba(0, 0, 0, 0.3);
+}
+
+.card-container {
+  overflow-x: scroll;
+}
+
+.card-container::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  min-width: 378px;
+  height: 201px;
+  margin: 0 20px;
+  border-radius: 7px;
+  background-color: aqua;
+}
+
+main .about-news {
+  margin-bottom: 0px;
+}
+
+.about {
+  flex: 1;
+  padding: 20px 70px;
+  margin-right: 100px;
+}
+
+.about p {
+  text-align: justify;
+}
+
+.berita {
+  flex: 1;
+  max-width: 350px;
+  height: 552px;
+  margin-right: 50px;
+  box-shadow: 0px 22px 25px rgba(0, 0, 0, 0.25);
+}
