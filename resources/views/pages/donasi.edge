@@ -16,7 +16,17 @@
   <br>
   
   <div id="Kesehatan" class="tabcontent show">
-    <p>teks</p>
+    @each(card in cards)
+      <div class="donasi-card">
+        <div class="donasi-pic">
+          <img src="{{card.img}}" alt="">
+        </div>
+        <div class="judul-button">
+          <h4>{{card.judul}}</h4>
+          <button><a href="/donasi/{{ card.slug }}" style="display: block;">Donasi Sekarang</a></button>
+        </div>
+      </div>
+    @endeach  
   </div>
 
   <div id="Pendidikan" class="tabcontent">

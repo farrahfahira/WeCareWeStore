@@ -1,0 +1,28 @@
+@layout('layouts/main')
+
+@section('styles')
+<link rel="stylesheet" href="/css/donasi.css">
+@endsection
+
+@section('content')
+<div class="deskripsi-donasi-content">
+  <section class="kiri">
+    <div class="kotak-deskripsi">
+      <h4>{{judul}}</h4>
+      <br>
+      <img src="{{img}}" alt="">
+      <br>
+      <p>{{ deskripsi }}</p>
+    </div>
+  </section>
+  <section class="kanan">
+    <div class="kotak-metode-bayar"></div>
+    <div class="kotak-nominal"></div>
+  </section>
+</div>
+
+@endsection
+
+@section('scripts')
+<script src="/js/donasi.js"></script>
+@endsection
