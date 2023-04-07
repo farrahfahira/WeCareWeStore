@@ -1,3 +1,9 @@
+/* laman donasi - 4 */
+/* laman deskripsi donasi - 75 */
+/* kotak deskripsi - 100 */
+/* kotak metode bayar  - */
+/* kotak nominal -  */
+
 /* laman donasi */
 .donasi-page {
   margin: 80px 120px;
@@ -16,8 +22,8 @@
 }
 
 .tab button.active {
-  text-decoration: underline;
-  text-underline-offset: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid black;
   font-weight: 900;
 }
 
@@ -67,11 +73,9 @@
   font-weight: 600;
   text-decoration: none;
 }
-
 /* end of laman donasi */
 
-/* laman deskripsi donasi */
-
+/* laman deskripsi donasi*/
 .deskripsi-donasi-content {
   margin: 80px 120px;
   display: flex;
@@ -85,6 +89,17 @@
   box-shadow: 0px 22px 25px rgba(0, 0, 0, 0.25);
 }
 
+.kotak-metode-bayar,
+.kotak-nominal {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  width: 370px;
+  height: 280px;
+  padding: 30px 20px;
+}
+/* end of laman deskripsi donasi */
+
+/* kotak deskripsi */
 .kotak-deskripsi {
   width: 650px;
   padding: 30px;
@@ -95,10 +110,69 @@
   width: 100%;
 }
 
-.kotak-metode-bayar,
-.kotak-nominal {
-  margin-left: 20px;
-  margin-bottom: 20px;
-  width: 370px;
-  height: 329px;
+.siapa-dan-berapa-donasi {
+  display: flex;
+  justify-content: space-between;
+  color: gray;
 }
+/* end of kotak deskripsi */
+
+/* kotak nominal */
+.pilih-nominal {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 12px;
+}
+
+.nominal {
+  font-size: 16px;
+  color: #5e8ad4;
+  padding: 10px 18px;
+  border: solid 1px #5e8ad4;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.or-divider {
+  display: flex;
+  margin: 0 10px;
+  color: black;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.or-divider::before,
+.or-divider::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  background-color: black;
+  vertical-align: middle;
+  margin: 12px 10px;
+}
+
+#jumlah-sumbangan {
+  margin: 16px 18px;
+  width: 293px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #8d8d8d4c;
+  border: #8d8d8d4c;
+  padding: 10px 20px;
+}
+
+.donasikan-button {
+  margin: 0 18px;
+  width: 293px;
+  height: 40px;
+  padding: 10px 30px;
+  border-radius: 28px;
+  background-color: #5e8ad4;
+  border: #5e8ad4;
+  color: white;
+  font-size: 16px;
+}
+/* end of kotak nominal */
+
+/* kotak metode bayar */
