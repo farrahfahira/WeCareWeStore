@@ -24,19 +24,19 @@
     <div class="kotak-metode-bayar">
       <p>Pilih Metode Pembayaran</p>
       <div class="pilih-metode">
-        <button class="bayar">Gopay</button>
-        <button class="bayar">DANA</button>
-        <button class="bayar">BSI</button>
+        <button class="opsi bayar">Gopay</button>
+        <button class="opsi bayar">DANA</button>
+        <button class="opsi bayar">BSI</button>
       </div>
     </div>
     <div class="kotak-nominal">
       <div class="pilih-nominal">
-        <button class="nominal">5.000</button>
-        <button class="nominal">10.000</button>
-        <button class="nominal">50.000</button>
+        <button class="opsi nominal">5.000</button>
+        <button class="opsi nominal">10.000</button>
+        <button class="opsi nominal">50.000</button>
       </div>
       <span class="or-divider">atau</span>
-      <input id="jumlah-sumbangan" type="number" name="jumlah-sumbangan" placeholder="Masukkan jumlah nominal..">
+      <input id="jumlah-sumbangan" type="number" name="jumlah-sumbangan" min="10000" max="1000000" step="1000" placeholder="Masukkan jumlah nominal..">
       <button class="donasikan-button">Donasikan</button>
     </div>
   </section>
