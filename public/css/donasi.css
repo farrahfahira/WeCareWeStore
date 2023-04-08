@@ -95,7 +95,7 @@
   margin-bottom: 20px;
   width: 370px;
   height: 280px;
-  padding: 30px 20px;
+  padding: 30px 40px;
 }
 /* end of laman deskripsi donasi */
 
@@ -120,7 +120,7 @@
 /* kotak nominal */
 .pilih-nominal {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin-bottom: 12px;
 }
 
@@ -131,11 +131,11 @@
   border: solid 1px #5e8ad4;
   border-radius: 10px;
   background-color: white;
+  margin-bottom: 10px;
 }
 
 .or-divider {
   display: flex;
-  margin: 0 10px;
   color: black;
   font-size: 18px;
   text-transform: uppercase;
@@ -149,11 +149,11 @@
   height: 1px;
   background-color: black;
   vertical-align: middle;
-  margin: 12px 10px;
+  margin: 12px 8px;
 }
 
 #jumlah-sumbangan {
-  margin: 16px 18px;
+  margin: 15px 0;
   width: 293px;
   height: 50px;
   border-radius: 10px;
@@ -163,7 +163,6 @@
 }
 
 .donasikan-button {
-  margin: 0 18px;
   width: 293px;
   height: 40px;
   padding: 10px 30px;
@@ -176,3 +175,17 @@
 /* end of kotak nominal */
 
 /* kotak metode bayar */
+.pilih-metode {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-evenly;
+  margin-bottom: 12px;
+}
+
+.bayar {
+  width: 293px;
+  height: 40px;
+  background: #ffffff;
+  border: 1px solid #abaaaa;
+  border-radius: 10px;
+}
