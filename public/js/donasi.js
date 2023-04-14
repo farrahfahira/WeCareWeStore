@@ -15,7 +15,6 @@ function openTab(evt, tabName) {
   evt.currentTarget.classList.add("active");
 }
 
-// membuat kelas active pada opsi yg dipilih di kotak metode bayar dan kotak nominal
 var buttonsBayar = document.querySelectorAll(".bayar");
 var buttonsNominal = document.querySelectorAll(".nominal");
 
