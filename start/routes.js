@@ -13,8 +13,8 @@ Route.get("/", async ({ view }) => {
   });
 });
 
-Route.get("/tes", async ({ view }) => {
-  const cards = await Donasi.query().select("judul").fetch();
+Route.get("/tes", async ({ view, response }) => {
+  const cards = await Donasi.all();
 
   return view.render("pages/donasi", {
     title: "Donasi",

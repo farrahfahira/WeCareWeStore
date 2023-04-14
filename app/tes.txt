@@ -6,12 +6,31 @@ await Donasi.create({
   deskripsi: ''
 })
 
+
+
+const Donasi = use('App/Models/Donasi')
+const donasi = new Donasi()
+donasi.query().where('category_id', 3).fetch().then((donasi) => {
+  console.log(donasi.toJSON())
+}).catch((error) => {
+  console.log(error)
+})
+donasi.category().fetch().then((category) => {
+  console.log(category.toJSON())
+}).catch((error) => {
+  console.log(error)
+})
+
+
+
+
 const Donasi = use('App/Models/Donasi')
 await Donasi.create({
   judul: 'Bantu Ibu Ani Untuk Kembali Semangat, Kanker Bukan Akhir dari Segalanya',
   slug: 'bantu-ibu-ani-untuk-kembali-semangat-kanker-bukan-akhir-dari-segalanya',
   img: 'img/kursi-roda.jpg',
-  deskripsi: 'Ibu Ani adalah seorang ibu yang sedang berjuang melawan kanker. Kanker telah memberikan banyak tantangan dalam hidupnya, baik dari segi fisik maupun mental. Ibu Ani mengalami kelelahan, mual, dan banyak gejala lainnya yang muncul akibat kanker. Namun, meskipun dihadapkan dengan kondisi yang sulit, Ibu Ani tetap bersemangat dan percaya bahwa kanker bukanlah akhir dari segalanya. Melalui kampanye galang dana ini, kita dapat membantu Ibu Ani untuk mendapatkan perawatan yang dibutuhkannya dan memberikan dukungan agar semangatnya tetap terjaga dalam melawan kanker.'
+  deskripsi: 'Ibu Ani adalah seorang ibu yang sedang berjuang melawan kanker. Kanker telah memberikan banyak tantangan dalam hidupnya, baik dari segi fisik maupun mental. Ibu Ani mengalami kelelahan, mual, dan banyak gejala lainnya yang muncul akibat kanker. Namun, meskipun dihadapkan dengan kondisi yang sulit, Ibu Ani tetap bersemangat dan percaya bahwa kanker bukanlah akhir dari segalanya. Melalui kampanye galang dana ini, kita dapat membantu Ibu Ani untuk mendapatkan perawatan yang dibutuhkannya dan memberikan dukungan agar semangatnya tetap terjaga dalam melawan kanker.',
+  category_id: 3
 })
 
 const Donasi = use('App/Models/Donasi')
@@ -19,6 +38,46 @@ await Donasi.create({
   judul: 'Menderita Tumor Sejak Masih Dalam Usia Kandungan, Adik Caca Terus Semangat',
   slug: 'menderita-tumor-sejak-masih-dalam-kandungan-adik-caca-terus-semangat',
   img: 'img/kapolri-jenguk-bocah-penderita-tumor-tulang_169.jpeg',
+  category_id: 1,
   deskripsi: 'Caca adalah seorang anak yang mengidap tumor sejak dalam kandungan. Kondisinya menghadirkan banyak tantangan dan pengorbanan bagi keluarganya. Namun, Caca tetap kuat dan bersemangat dalam menghadapi kondisinya yang sulit. Dengan mendukung kampanye galang dana ini, kita dapat membantu Caca dan keluarganya untuk mendapatkan perawatan yang dibutuhkan dan membangkitkan semangatnya agar ia terus berjuang melawan tumor.'
+})
+
+Donasi.first().then((donasi) => {
+  console.log(donasi.toJSON())})
+  .catch((error) => {
+    console.log(error)
+})
+
+const Donasi = use('App/Models/Donasi')
+await Donasi.create({
+  judul: 'Menderita Tumor Sejak Masih Dalam Usia Kandungan, Adik Caca Terus Semangat',
+  slug: 'menderita-tumor-sejak-masih-dalam-kandungan-adik-caca-terus-semangat',
+  img: 'img/kapolri-jenguk-bocah-penderita-tumor-tulang_169.jpeg',
+  deskripsi: 'Caca adalah seorang anak yang mengidap tumor sejak dalam kandungan. Kondisinya menghadirkan banyak tantangan dan pengorbanan bagi keluarganya. Namun, Caca tetap kuat dan bersemangat dalam menghadapi kondisinya yang sulit. Dengan mendukung kampanye galang dana ini, kita dapat membantu Caca dan keluarganya untuk mendapatkan perawatan yang dibutuhkan dan membangkitkan semangatnya agar ia terus berjuang melawan tumor.',
+  category_id: '1'
+})
+
+const Category = use('App/Models/Category')
+await Category.create({
+  nama: 'Kesehatan',
+  slug: 'kesehatan'
+})
+
+const Category = use('App/Models/Category')
+await Category.create({
+  nama: 'Pendidikan',
+  slug: 'pendidikan'
+})
+
+const Category = use('App/Models/Category')
+await Category.create({
+  nama: 'Kemiskinan',
+  slug: 'kemiskinan'
+})
+
+const Category = use('App/Models/Category')
+await Category.create({
+  nama: 'Bencana',
+  slug: 'bencana'
 })
 

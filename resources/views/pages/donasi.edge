@@ -12,21 +12,24 @@
     <button class="tablinks" onclick="openTab(event, 'Kemiskinan')">Kemiskinan</button>
     <button class="tablinks" onclick="openTab(event, 'Bencana')">Bencana</button>
   </div>
-  
+
   <br>
-  
+
   <div id="Kesehatan" class="tabcontent show">
     @each(card in cards)
-      <div class="donasi-card">
-        <div class="donasi-pic">
-          <img src="{{card.img}}" alt="">
-        </div>
-        <div class="judul-button">
-          <h4>{{ card['judul'] }}</h4>
-          <button><a href="/donasi/{{ card.slug }}" style="display: block;">Donasi Sekarang</a></button>
-        </div>
+    <div class="donasi-card">
+      <div class="donasi-pic">
+        <img src="{{card.img}}" alt="">
       </div>
-    @endeach  
+      <div class="judul-button">
+        <h4>{{ card.category_id }}</h4>
+        <button><a href="/donasi/{{ card.slug }}" style="display: block;">Donasi Sekarang</a></button>
+      </div>
+    </div>
+    @endeach
+
+    
+
   </div>
 
   <div id="Pendidikan" class="tabcontent">
@@ -37,8 +40,8 @@
 
   <div id="Bencana" class="tabcontent">
   </div>
-  
-  
+
+
 </div>
 
 @endsection

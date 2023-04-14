@@ -7,6 +7,10 @@ class Donasi extends Model {
   static get fillable() {
     return ["judul", "deskripsi"];
   }
+
+  category() {
+    return this.belongsTo("App/Models/Category");
+  }
 }
 
 module.exports = Donasi;
