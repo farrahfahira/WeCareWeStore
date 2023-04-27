@@ -31,3 +31,9 @@ Route.get("/gudangbarang", async ({ view, response }) => {
     title: "Gudang Barang",
   });
 });
+
+Route.get("/test", async ({ view, response }) => {
+  return view.render("pages/donasi", {
+    title: "Gudang Barang",
+  });
+});
