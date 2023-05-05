@@ -15,8 +15,9 @@
 
   <br>
 
-  <div id="Kesehatan" class="tabcontent show">
+  <div class="tabcontent show" id="Kesehatan">
     @each(card in cards)
+    @if(card.category_id == 1)
     <div class="donasi-card">
       <div class="donasi-pic">
         <img src="{{card.img}}" alt="">
@@ -26,21 +27,57 @@
         <button><a href="/donasi/{{ card.slug }}" style="display: block;">Donasi Sekarang</a></button>
       </div>
     </div>
+    @endif
     @endeach
-
-    
-
   </div>
 
-  <div id="Pendidikan" class="tabcontent">
+  <div class="tabcontent" id="Pendidikan">
+    @each(card in cards)
+    @if(card.category_id == 2)
+    <div class="donasi-card">
+      <div class="donasi-pic">
+        <img src="{{card.img}}" alt="">
+      </div>
+      <div class="judul-button">
+        <h4>{{ card.judul }}</h4>
+        <button><a href="/donasi/{{ card.slug }}" style="display: block;">Donasi Sekarang</a></button>
+      </div>
+    </div>
+    @endif
+    @endeach
   </div>
 
-  <div id="Kemiskinan" class="tabcontent">
+  <div class="tabcontent" id="Kemiskinan">
+    @each(card in cards)
+    @if(card.category_id == 3)
+    <div class="donasi-card">
+      <div class="donasi-pic">
+        <img src="{{card.img}}" alt="">
+      </div>
+      <div class="judul-button">
+        <h4>{{ card.judul }}</h4>
+        <button><a href="/donasi/{{ card.slug }}" style="display: block;">Donasi Sekarang</a></button>
+      </div>
+    </div>
+    @endif
+    @endeach
   </div>
 
-  <div id="Bencana" class="tabcontent">
+  <div class="tabcontent" id="Bencana">
+    @each(card in cards)
+    @if(card.category_id == 4)
+    <div class="donasi-card">
+      <div class="donasi-pic">
+        <img src="{{card.img}}" alt="">
+      </div>
+      <div class="judul-button">
+        <h4>{{ card.judul }}</h4>
+        <button><a href="/donasi/{{ card.slug }}" style="display: block;">Donasi Sekarang</a></button>
+      </div>
+    </div>
+    @endif
+    @endeach
   </div>
-
 
 </div>
 

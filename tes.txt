@@ -81,3 +81,57 @@ await Category.create({
   slug: 'bencana'
 })
 
+<div id= Kesehatan class="tabcontent show">
+    @each(card in cards)
+      @if(card.category_id == 1)
+        <div class="donasi-card">
+          <div class="donasi-pic">
+            <img src="{{card.img}}" alt="">
+          </div>
+          <div class="judul-button">
+            <h4>{{ card.category_id }}</h4>
+            <button><a href="/donasi/{{ card.slug }}" style="display: block;">Donasi Sekarang</a></button>
+          </div>
+        </div>
+      @endif
+    @endeach
+  </div>
+
+  <div id="Pendidikan" class="tabcontent">
+  </div>
+
+  <div id="Kemiskinan" class="tabcontent">
+  </div>
+
+  <div id="Bencana" class="tabcontent">
+  </div>
+
+
+<!-- Kategori film -->
+<div class="film-category" data-category-id="1">Romance</div>
+<div class="film-category" data-category-id="2">Drama</div>
+
+<!-- Konten film -->
+<div class="film-content"></div>
+
+<script>
+const categoryButtons = document.querySelectorAll('.film-category')
+const filmContent = document.querySelector('.film-content')
+
+categoryButtons.forEach(button => {
+  button.addEventListener('click', async () => {
+    const categoryId = button.getAttribute('data-category-id')
+    const response = await fetch(`/films/${categoryId}`)
+    const films = await response.json()
+
+    // Menampilkan data film
+    const filmHtml = films.map(film => `
+      <div>
+        <h3>${film.title}</h3>
+        <p>${film.description}</p>
+      </div>
+    `).join('')
+    filmContent.innerHTML = filmHtml
+  })
+})
+</script>
