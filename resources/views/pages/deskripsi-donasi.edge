@@ -1,0 +1,49 @@
+@layout('layouts/main')
+
+@section('styles')
+<link rel="stylesheet" href="/css/donasi.css">
+@endsection
+
+@section('content')
+<div class="deskripsi-donasi-content">
+  <section class="kiri">
+    <div class="kotak-deskripsi">
+      <h4>{{ donasi.judul }}</h4>
+      <br>
+      <img src="/{{donasi.img}}" alt="">
+      <br>
+      <p>{{ donasi.deskripsi }}</p>
+      <br>
+      <div class="siapa-dan-berapa-donasi">
+        <p>2000+ telah berdonasi</p>
+        <p>Dana Terkumpul</p>
+      </div>
+    </div>
+  </section>
+  <section class="kanan">
+    <div class="kotak-metode-bayar">
+      <p>Pilih Metode Pembayaran</p>
+      <div class="pilih-metode">
+        <button class="opsi bayar">Gopay</button>
+        <button class="opsi bayar">DANA</button>
+        <button class="opsi bayar">BSI</button>
+      </div>
+    </div>
+    <div class="kotak-nominal">
+      <div class="pilih-nominal">
+        <button class="opsi nominal">5.000</button>
+        <button class="opsi nominal">10.000</button>
+        <button class="opsi nominal">50.000</button>
+      </div>
+      <span class="or-divider">atau</span>
+      <input id="jumlah-sumbangan" type="number" name="jumlah-sumbangan" min="10000" max="1000000" step="1000" placeholder="Masukkan jumlah nominal..">
+      <button class="donasikan-button">Donasikan</button>
+    </div>
+  </section>
+</div>
+
+@endsection
+
+@section('scripts')
+<script src="/js/donasi.js"></script>
+@endsection
