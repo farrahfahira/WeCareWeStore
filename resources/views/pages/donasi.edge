@@ -33,7 +33,7 @@
 
   <div class="tabcontent" id="Pendidikan">
     @each(card in cards)
-    @if(card.category_id == 2)
+    @if(card.category_id == 2 && $loop.index <= 6)
     <div class="donasi-card">
       <div class="donasi-pic">
         <img src="{{card.img}}" alt="">

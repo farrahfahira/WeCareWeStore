@@ -2,26 +2,30 @@ const Donasi = use('App/Models/Donasi')
 await Donasi.create({
   judul: '',
   slug: '',
-  img: '',
-  deskripsi: ''
+  img: 'img/',
+  deskripsi: '',
+  category_id: 
 })
-
-
 
 const Donasi = use('App/Models/Donasi')
-const donasi = new Donasi()
-donasi.query().where('category_id', 3).fetch().then((donasi) => {
-  console.log(donasi.toJSON())
-}).catch((error) => {
-  console.log(error)
-})
-donasi.category().fetch().then((category) => {
-  console.log(category.toJSON())
-}).catch((error) => {
-  console.log(error)
+await Donasi.create({
+  judul: 'Bantu Masyarakat Miskin dengan Donasi Makanan',
+  slug: 'bantu-masyarakat-miskin-dengan-donasi-makanan',
+  img: 'img/bantu-masyarakat-miskin-dengan-donasi-makanan.jpg',
+  deskripsi: 'Donasi makanan dapat membantu masyarakat miskin yang kekurangan akses ke sumber makanan yang bergizi. Banyak keluarga miskin di Indonesia yang sulit memenuhi kebutuhan makanan sehari-hari, sehingga donasi makanan sangat dibutuhkan untuk membantu mengatasi masalah kemiskinan.',
+  category_id: 3
 })
 
+.clear --> utk clear
 
+const Donasi = use('App/Models/Donasi')
+await Donasi.create({
+  judul: 'Donasi Komputer untuk Pendidikan Anak-Anak Kurang Mampu',
+  slug: 'donasi-komputer-untuk-pendidikan-anak-anak-kurang-mampu',
+  img: 'img/sumbangan-laptop-bakti-sosial-pt-anggaza-widya-ridhamulia.jpg',
+  deskripsi: ' Donasi komputer dan perangkat lunak dapat membantu anak-anak kurang mampu memperoleh akses ke teknologi informasi dan pendidikan digital. Dengan teknologi yang canggih, mereka dapat mempelajari keterampilan yang berguna dan meningkatkan peluang mereka untuk sukses di masa depan.',
+  category_id: 2
+})
 
 
 const Donasi = use('App/Models/Donasi')
