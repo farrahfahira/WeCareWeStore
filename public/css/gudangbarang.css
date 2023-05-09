@@ -10,7 +10,7 @@ label {
     padding-top: 30px;
   }
   
-  form {
+  form, div {
     /* margin: 50px, 50px, 50px, 50px; */
     background-color: rgb(202, 228, 255);
     margin-left: 50px;
@@ -90,4 +90,56 @@ label {
     background-color: #ff3d94;
 
   }
+
+  /* div{
+    background-color: rgb(202, 228, 255);
+  } */
+
+  .tabel-barang {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+  }
+  
+  .tabel-barang th, tbody {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    width: 250px;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .tabel-barang td, tbody {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .tabel-barang tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .tabel-barang th,
+  .tabel-barang td,tbody {
+    padding: 8px;
+    text-align: left;
+  }
+
+  .tabel-barang th {
+    background-color: #316dde;
+    color: white;
+  }
+
+  tbody{
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    width: 250px;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  
   
