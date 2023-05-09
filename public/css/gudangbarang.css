@@ -1,0 +1,93 @@
+/* styling label */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  h1{
+    text-align: center;
+    padding-top: 30px;
+  }
+  
+  form {
+    /* margin: 50px, 50px, 50px, 50px; */
+    background-color: rgb(202, 228, 255);
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+    padding-bottom: 30px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 50px; 
+  }
+
+  label {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+  
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+
+  /* styling input dan textarea */
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  /* styling select */
+  select {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    background-color: #fff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("https://cdn.icon-icons.com/icons2/2389/PNG/512/arrow_down_icon_144459.png");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+  }
+  
+  /* styling radio button */
+  input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  /* styling submit button */
+  input[type="submit"],
+  input[type="reset"], button {
+    background-color: #4caf50;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  /* styling reset button */
+  input[type="reset"] {
+    background-color: #f44336;
+  }
+
+  button {
+    background-color: #ff3d94;
+
+  }
+  
