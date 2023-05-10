@@ -10,16 +10,19 @@ tambahBarangBtn.addEventListener('click', function() {
 
   // Buat elemen baru untuk tabel dan isi dengan data dari form
   const tr = document.createElement('tr');
+  const tdKat = document.createElement('td');
   const tdNama = document.createElement('td');
   const tdJumlah = document.createElement('td');
   const tdAlamat = document.createElement('td');
   const tdKet = document.createElement('td');
 
+  tdKat.textContent = form.Kat.value;
   tdNama.textContent = form.nama.value;
   tdJumlah.textContent = form.jumlah.value;
   tdAlamat.textContent = form.alamat.value;
   tdKet.textContent = form.ket.value;
 
+  tr.appendChild(tdKat);
   tr.appendChild(tdNama);
   tr.appendChild(tdJumlah);
   tr.appendChild(tdAlamat);

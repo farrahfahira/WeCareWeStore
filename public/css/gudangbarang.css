@@ -10,7 +10,7 @@ label {
     padding-top: 30px;
   }
   
-  form, div {
+  form {
     /* margin: 50px, 50px, 50px, 50px; */
     background-color: rgb(202, 228, 255);
     margin-left: 50px;
@@ -96,12 +96,19 @@ label {
   } */
 
   .tabel-barang {
-    width: 100%;
+    background-color: rgb(202, 228, 255);
+    margin-left: 50px;
+    margin-right: 100px;
     margin-top: 20px;
+    padding-bottom: 30px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 50px; 
+    width: 94%;
     border-collapse: collapse;
   }
   
-  .tabel-barang th, tbody {
+  .tabel-barang th{
     background-color: #f2f2f2;
     border: 1px solid #ddd;
     padding: 8px;
@@ -111,27 +118,34 @@ label {
     margin-top: 20px;
   }
   
-  .tabel-barang td, tbody {
-    border: 1px solid #ddd;
+  .tabel-barang td{
+    border: 1px solid #e2e2e2;
     padding: 8px;
-  }
+    text-align: left;
+    width: 252px;
+    border-collapse: collapse;
+  } 
   
   .tabel-barang tr:nth-child(even) {
     background-color: #f2f2f2;
   }
+
+  .tabel-barang tr:nth-child(odd) {
+    background-color: #5e89d45a;
+  }
   
   .tabel-barang th,
-  .tabel-barang td,tbody {
+  .tabel-barang td{
     padding: 8px;
     text-align: left;
   }
 
   .tabel-barang th {
-    background-color: #316dde;
-    color: white;
-  }
+    background-color: #4167A6;
+    color: white; 
+  } 
 
-  tbody{
+  /* tbody{
     background-color: #f2f2f2;
     border: 1px solid #ddd;
     padding: 8px;
@@ -139,7 +153,7 @@ label {
     width: 250px;
     border-collapse: collapse;
     margin-top: 20px;
-  }
+  } */
   
   
   
