@@ -13,6 +13,7 @@ Route.get("/", async ({ view }) => {
   });
 });
 
+
 Route.get("/tes", async ({ view, response }) => {
   const cards = await Donasi.all();
 
@@ -32,6 +33,11 @@ Route.get("/gudangbarang", async ({ view, response }) => {
   });
 });
 
+Route.get("/register1", async ({ view, response }) => {
+  return view.render("pages/register", {
+    title: "Register",
+  });
+});
 Route.get("/login", "AuthController.showLoginForm");
 Route.post("/login", "AuthController.login").as("login");
 Route.post("/logout", "AuthController.logout").as("logout");
