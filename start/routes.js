@@ -35,3 +35,9 @@ Route.get("/gudangbarang", async ({ view, response }) => {
     title: "Gudang Barang",
   });
 });
+
+Route.get("/login", "AuthController.showLoginForm");
+Route.post("/login", "AuthController.login").as("login");
+Route.post("/logout", "AuthController.logout").as("logout");
+Route.get("/register", "AuthController.showRegistrationForm");
+Route.post("/register", "AuthController.register").as("register");
