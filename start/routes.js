@@ -1,34 +1,30 @@
 "use strict";
 
 const { get } = require("@adonisjs/lucid/src/Factory");
-
-/*
-|--------------------------------------------------------------------------
-| Routes
-|--------------------------------------------------------------------------
-|
-| Http routes are entry points to your web application. You can create
-| routes for different URL's and bind Controller actions to them.
-|
-| A complete guide on routing is available here.
-| http://adonisjs.com/docs/4.1/routing
-|
-*/
+const Donasi = require("../app/Models/Donasi");
+const DonasiController = require("../app/Controllers/Http/DonasiController");
 
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use("Route");
 
-Route.get("/", async ({ view, response }) => {
+Route.get("/", async ({ view }) => {
   return view.render("pages/beranda", {
     title: "Beranda",
   });
 });
 
-Route.get("/donasi", async ({ view, response }) => {
+Route.get("/tes", async ({ view, response }) => {
+  const cards = await Donasi.all();
+
   return view.render("pages/donasi", {
     title: "Donasi",
+    cards: cards.toJSON(),
   });
 });
+
+Route.get("/donasi", "DonasiController.index");
+
+Route.get("/donasi/:slug", "DonasiController.showDetilDonasi");
 
 Route.get("/gudangbarang", async ({ view, response }) => {
   return view.render("pages/gudangbarang", {
@@ -41,3 +37,4 @@ Route.post("/login", "AuthController.login").as("login");
 Route.post("/logout", "AuthController.logout").as("logout");
 Route.get("/register", "AuthController.showRegistrationForm");
 Route.post("/register", "AuthController.register").as("register");
+
