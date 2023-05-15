@@ -7,7 +7,7 @@
     <title>WeCareWeStore | {{ title }}</title> 
 
     {{--  CSS  --}}
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="/css/main.css" />
     @!section('styles')
     
 
@@ -15,11 +15,13 @@
   <body>
     @include('partials/header')
 
+    @include('partials/modalLogin')
+
     @!section('content')
 
     @include('partials/footer')
 
-    <script src="js/main.js"></script>
+    <script src="/js/main.js"></script>
     @!section('scripts')
   </body>
 </html>
