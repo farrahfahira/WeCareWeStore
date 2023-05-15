@@ -25,7 +25,7 @@ Route.get("/", async ({ view, response }) => {
 });
 
 Route.get("/donasi", async ({ view, response }) => {
-  return view.render("pages/donasi", {
+  return view.render("pages/barcode", {
     title: "Donasi",
   });
 });

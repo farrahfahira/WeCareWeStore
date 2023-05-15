@@ -34,3 +34,11 @@ tambahBarangBtn.addEventListener('click', function() {
   // Reset form untuk mengosongkan isian
   form.reset();
 });
+
+// Di dalam file gudangbarang.js atau di tempat yang sesuai
+document.querySelector('form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Mencegah aksi default pengiriman formulir
+
+  // Lakukan pengalihan ke URL yang diinginkan
+  window.location.href = 'https://wa.me/qr/KXQLSUH3OFHYE1';
+});
