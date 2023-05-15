@@ -1,13 +1,88 @@
 @layout('layouts/main')
 
 @section('styles')
-  <link rel="stylesheet" href="css/donasi.css">
+<link rel="stylesheet" href="css/donasi.css">
 @endsection
 
 @section('content')
-{{--  code  --}}
+<div class="donasi-page">
+  <div class="tab">
+    <button class="tablinks active" onclick="openTab(event, 'Kesehatan')">Kesehatan</button>
+    <button class="tablinks" onclick="openTab(event, 'Pendidikan')">Pendidikan</button>
+    <button class="tablinks" onclick="openTab(event, 'Kemiskinan')">Kemiskinan</button>
+    <button class="tablinks" onclick="openTab(event, 'Bencana')">Bencana</button>
+  </div>
+
+  <br>
+
+  <div class="tabcontent show" id="Kesehatan">
+    @each(card in cards)
+    @if(card.category_id == 1)
+    <div class="donasi-card">
+      <div class="donasi-pic">
+        <img src="{{card.img}}" alt="">
+      </div>
+      <div class="judul-button">
+        <h4>{{ card.judul }}</h4>
+        <button><a href="/donasi/{{ card.slug }}" style="display: block;">Donasi Sekarang</a></button>
+      </div>
+    </div>
+    @endif
+    @endeach
+  </div>
+
+  <div class="tabcontent" id="Pendidikan">
+    @each(card in cards)
+    @if(card.category_id == 2 && $loop.index <= 6)
+    <div class="donasi-card">
+      <div class="donasi-pic">
+        <img src="{{card.img}}" alt="">
+      </div>
+      <div class="judul-button">
+        <h4>{{ card.judul }}</h4>
+        <button><a href="/donasi/{{ card.slug }}" style="display: block;">Donasi Sekarang</a></button>
+      </div>
+    </div>
+    @endif
+    @endeach
+  </div>
+
+  <div class="tabcontent" id="Kemiskinan">
+    @each(card in cards)
+    @if(card.category_id == 3)
+    <div class="donasi-card">
+      <div class="donasi-pic">
+        <img src="{{card.img}}" alt="">
+      </div>
+      <div class="judul-button">
+        <h4>{{ card.judul }}</h4>
+        <button><a href="/donasi/{{ card.slug }}" style="display: block;">Donasi Sekarang</a></button>
+      </div>
+    </div>
+    @endif
+    @endeach
+  </div>
+
+  <div class="tabcontent" id="Bencana">
+    @each(card in cards)
+    @if(card.category_id == 4)
+    <div class="donasi-card">
+      <div class="donasi-pic">
+        <img src="{{card.img}}" alt="">
+      </div>
+      <div class="judul-button">
+        <h4>{{ card.judul }}</h4>
+        <button><a href="/donasi/{{ card.slug }}" style="display: block;">Donasi Sekarang</a></button>
+      </div>
+    </div>
+    @endif
+    @endeach
+  </div>
+
+</div>
+
 @endsection
 
 @section('scripts')
-  <script src="js/donasi.js"></script>
+<script src="js/donasi.js"></script>
 @endsection
