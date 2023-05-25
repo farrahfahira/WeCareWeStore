@@ -1,0 +1,141 @@
+const Donasi = use('App/Models/Donasi')
+await Donasi.create({
+  judul: '',
+  slug: '',
+  img: 'img/',
+  deskripsi: '',
+  category_id: 
+})
+
+const Donasi = use('App/Models/Donasi')
+await Donasi.create({
+  judul: 'Bantu Masyarakat Miskin dengan Donasi Makanan',
+  slug: 'bantu-masyarakat-miskin-dengan-donasi-makanan',
+  img: 'img/bantu-masyarakat-miskin-dengan-donasi-makanan.jpg',
+  deskripsi: 'Donasi makanan dapat membantu masyarakat miskin yang kekurangan akses ke sumber makanan yang bergizi. Banyak keluarga miskin di Indonesia yang sulit memenuhi kebutuhan makanan sehari-hari, sehingga donasi makanan sangat dibutuhkan untuk membantu mengatasi masalah kemiskinan.',
+  category_id: 3
+})
+
+.clear --> utk clear
+
+const Donasi = use('App/Models/Donasi')
+await Donasi.create({
+  judul: 'Donasi Komputer untuk Pendidikan Anak-Anak Kurang Mampu',
+  slug: 'donasi-komputer-untuk-pendidikan-anak-anak-kurang-mampu',
+  img: 'img/sumbangan-laptop-bakti-sosial-pt-anggaza-widya-ridhamulia.jpg',
+  deskripsi: ' Donasi komputer dan perangkat lunak dapat membantu anak-anak kurang mampu memperoleh akses ke teknologi informasi dan pendidikan digital. Dengan teknologi yang canggih, mereka dapat mempelajari keterampilan yang berguna dan meningkatkan peluang mereka untuk sukses di masa depan.',
+  category_id: 2
+})
+
+
+const Donasi = use('App/Models/Donasi')
+await Donasi.create({
+  judul: 'Bantu Ibu Ani Untuk Kembali Semangat, Kanker Bukan Akhir dari Segalanya',
+  slug: 'bantu-ibu-ani-untuk-kembali-semangat-kanker-bukan-akhir-dari-segalanya',
+  img: 'img/kursi-roda.jpg',
+  deskripsi: 'Ibu Ani adalah seorang ibu yang sedang berjuang melawan kanker. Kanker telah memberikan banyak tantangan dalam hidupnya, baik dari segi fisik maupun mental. Ibu Ani mengalami kelelahan, mual, dan banyak gejala lainnya yang muncul akibat kanker. Namun, meskipun dihadapkan dengan kondisi yang sulit, Ibu Ani tetap bersemangat dan percaya bahwa kanker bukanlah akhir dari segalanya. Melalui kampanye galang dana ini, kita dapat membantu Ibu Ani untuk mendapatkan perawatan yang dibutuhkannya dan memberikan dukungan agar semangatnya tetap terjaga dalam melawan kanker.',
+  category_id: 3
+})
+
+const Donasi = use('App/Models/Donasi')
+await Donasi.create({
+  judul: 'Menderita Tumor Sejak Masih Dalam Usia Kandungan, Adik Caca Terus Semangat',
+  slug: 'menderita-tumor-sejak-masih-dalam-kandungan-adik-caca-terus-semangat',
+  img: 'img/kapolri-jenguk-bocah-penderita-tumor-tulang_169.jpeg',
+  category_id: 1,
+  deskripsi: 'Caca adalah seorang anak yang mengidap tumor sejak dalam kandungan. Kondisinya menghadirkan banyak tantangan dan pengorbanan bagi keluarganya. Namun, Caca tetap kuat dan bersemangat dalam menghadapi kondisinya yang sulit. Dengan mendukung kampanye galang dana ini, kita dapat membantu Caca dan keluarganya untuk mendapatkan perawatan yang dibutuhkan dan membangkitkan semangatnya agar ia terus berjuang melawan tumor.'
+})
+
+Donasi.first().then((donasi) => {
+  console.log(donasi.toJSON())})
+  .catch((error) => {
+    console.log(error)
+})
+
+const Donasi = use('App/Models/Donasi')
+await Donasi.create({
+  judul: 'Menderita Tumor Sejak Masih Dalam Usia Kandungan, Adik Caca Terus Semangat',
+  slug: 'menderita-tumor-sejak-masih-dalam-kandungan-adik-caca-terus-semangat',
+  img: 'img/kapolri-jenguk-bocah-penderita-tumor-tulang_169.jpeg',
+  deskripsi: 'Caca adalah seorang anak yang mengidap tumor sejak dalam kandungan. Kondisinya menghadirkan banyak tantangan dan pengorbanan bagi keluarganya. Namun, Caca tetap kuat dan bersemangat dalam menghadapi kondisinya yang sulit. Dengan mendukung kampanye galang dana ini, kita dapat membantu Caca dan keluarganya untuk mendapatkan perawatan yang dibutuhkan dan membangkitkan semangatnya agar ia terus berjuang melawan tumor.',
+  category_id: '1'
+})
+
+const Category = use('App/Models/Category')
+await Category.create({
+  nama: 'Kesehatan',
+  slug: 'kesehatan'
+})
+
+const Category = use('App/Models/Category')
+await Category.create({
+  nama: 'Pendidikan',
+  slug: 'pendidikan'
+})
+
+const Category = use('App/Models/Category')
+await Category.create({
+  nama: 'Kemiskinan',
+  slug: 'kemiskinan'
+})
+
+const Category = use('App/Models/Category')
+await Category.create({
+  nama: 'Bencana',
+  slug: 'bencana'
+})
+
+<div id= Kesehatan class="tabcontent show">
+    @each(card in cards)
+      @if(card.category_id == 1)
+        <div class="donasi-card">
+          <div class="donasi-pic">
+            <img src="{{card.img}}" alt="">
+          </div>
+          <div class="judul-button">
+            <h4>{{ card.category_id }}</h4>
+            <button><a href="/donasi/{{ card.slug }}" style="display: block;">Donasi Sekarang</a></button>
+          </div>
+        </div>
+      @endif
+    @endeach
+  </div>
+
+  <div id="Pendidikan" class="tabcontent">
+  </div>
+
+  <div id="Kemiskinan" class="tabcontent">
+  </div>
+
+  <div id="Bencana" class="tabcontent">
+  </div>
+
+
+<!-- Kategori film -->
+<div class="film-category" data-category-id="1">Romance</div>
+<div class="film-category" data-category-id="2">Drama</div>
+
+<!-- Konten film -->
+<div class="film-content"></div>
+
+<script>
+const categoryButtons = document.querySelectorAll('.film-category')
+const filmContent = document.querySelector('.film-content')
+
+categoryButtons.forEach(button => {
+  button.addEventListener('click', async () => {
+    const categoryId = button.getAttribute('data-category-id')
+    const response = await fetch(`/films/${categoryId}`)
+    const films = await response.json()
+
+    // Menampilkan data film
+    const filmHtml = films.map(film => `
+      <div>
+        <h3>${film.title}</h3>
+        <p>${film.description}</p>
+      </div>
+    `).join('')
+    filmContent.innerHTML = filmHtml
+  })
+})
+</script>
